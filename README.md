@@ -1,7 +1,13 @@
-This is a mod for Minecraft that adds various items to start a faction, claim territory in the name of that faction and then have a go at other player’s territories.
+"Steve, we need to talk."
+"..."
+"Yeah, it's about the way you go about harvesting crops."
+"..."
+"Right. Could you maybe... iunno, be a little more gentle in how you do it? Like, maybe not rip them out entirely? Or reseed the plants as you go?"
+"..."
+"Ok, thanks, man. You're the best."
 
-More information can be found over here -> https://wildwestscifi.net/coding/12607-minecraft-forge-territorial-dealings
+Gentle Harvest is a small mod that automatically replants crops as you harvest them (by punching right-clicking them). In vanilla MC these crops are wheat, potatoes, carrots and cocoa pods. Only fully grown crops are affected.
 
-There are two versions here. One is the half-finished overhaul (b18) and the other is the commented out, functioning old version (b17). 
-(Commented out as in "the mod header in the Main class was commented out, to not be recognized by Forge.)
-That will have to be adressed first before you can compile this mod.
+It should also be compatible with any mod-added crops that extend BlockCrops or BlockCocoa.
+
+Right now the mod is required to exist on both server and client, because Forge says so.
