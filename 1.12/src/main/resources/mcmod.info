@@ -1,0 +1,11 @@
+[
+{
+  "modid": "harvestchevsky",
+  "name": "Gentle Harvest",
+  "description": "Simple harvesting of Crops!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "authorList": ["Domochevsky, EPIIC_THUNDERCAT"],
+  "credits": "#minecraftforge! As well as EPIIC_THUNDERCAT for maintaining it!"
+}
+]

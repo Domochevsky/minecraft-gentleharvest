@@ -5,7 +5,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = "harvestchevsky", name = "Gentle Harvest", version = "b8", acceptableRemoteVersions = "*", canBeDeactivated = true, acceptedMinecraftVersions="[1.9,1.11)")
+@Mod(modid = "harvestchevsky", name = "Gentle Harvest", version = "b9", acceptableRemoteVersions = "*", canBeDeactivated = true, acceptedMinecraftVersions="[1.9,1.10.2,1.11,1.11.2,1.12)")
 public class Main
 {
 	@EventHandler
@@ -44,5 +44,7 @@ b7
 b8
 - Updated to 1.10.*
 - Added compatibility for beetroot. So that should be harvestable now too. (For some reason they're using a different age property than every other crops.)
+b9
+- Updated to be compatible with Forge 2316
 
  */
