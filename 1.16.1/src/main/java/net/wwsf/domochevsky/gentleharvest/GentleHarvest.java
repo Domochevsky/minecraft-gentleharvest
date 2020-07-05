@@ -42,7 +42,7 @@ public class GentleHarvest {
 	public void onPlayerInteract(RightClickBlock event) {
         if (event.getWorld().isRemote()) { return; } 						// Not doing this on client side. (Seems to be fired on server side only by default already.)
 		if (event.getPlayer() == null) { return; }						// Who...?
-        // if (event.getPlayer().isCreative()) { return; }	                // Not interfering with creative mode
+        if (event.getPlayer().isCreative()) { return; }	                // Not interfering with creative mode
         if (event.getPlayer().isSpectator()) { return; }                // Not doing anything for spectator accounts
         if (event.getHand() != Hand.MAIN_HAND) { return; }				// Only for the main hand
         if (event.getPlayer().isSneaking()) { return; }	                // Not interfering like this.
@@ -79,7 +79,7 @@ public class GentleHarvest {
 	public void onBlockBreak(BreakEvent event) {
         if (event.getWorld().isRemote()) { return; } 						// Not doing this on client side. (Seems to be fired on server side only by default already.)
 		if (event.getPlayer() == null) { return; }						// Who...?
-        // if (event.getPlayer().isCreative()) { return; }	                // Not interfering with creative mode
+        if (event.getPlayer().isCreative()) { return; }	                // Not interfering with creative mode
         if (event.getPlayer().isSpectator()) { return; }                // Not doing anything for spectator accounts
         if (event.getPlayer().isSneaking()) { return; }	                // Not interfering like this.
 
