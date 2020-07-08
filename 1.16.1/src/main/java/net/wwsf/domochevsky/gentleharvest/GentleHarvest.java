@@ -28,7 +28,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod("harvestchevsky")
 public class GentleHarvest {
     // Directly reference a log4j logger.
-    // private static final Logger LOGGER = LogManager.getLogger();
+    // Logger LOGGER = LogManager.getLogger();
 
     public GentleHarvest() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -111,12 +111,20 @@ public class GentleHarvest {
 
 		if (blockState == null) { return false; }
 
-		int maxAge = Collections.max(ageProperty.getAllowedValues());
-		int age = blockState.get(ageProperty);
+        int maxAge = Collections.max(ageProperty.getAllowedValues());
+        int age = 0;    // Initialise age as zero
+
+        try {   // To fix issue https://github.com/Domochevsky/minecraft-gentleharvest/issues/2
+            age = blockState.get(ageProperty);
+        } catch (IllegalArgumentException e) {
+            // LOGGER.info(e.getMessage());
+            return false;
+        }
+        
 
 		if (age < maxAge) { return false; } // Not yet.
 
-        // block.spawnDrops(world, pos, blockState, fortune);
+        // block.spawnDrops(world, pos, blockState, fortune);e
         Block.spawnDrops(blockState, world, pos);
 
 		// Step 2, reset the crop's age
